@@ -52,7 +52,7 @@ class DataSet():
         fwdtext = "fwd"
 
         for i in range(len(self.subjects)):
-            if self.myemail not in self.df["To: (Address)"][i].lower():
+            if str(self.myemail) not in str(self.df["To: (Address)"][i].lower()):
                 subj = str(self.df["Subject"][i]).lower()
 
                 if fwdtext.lower() in subj:

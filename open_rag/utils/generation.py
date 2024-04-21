@@ -18,7 +18,14 @@ def augment_query(query, documents):
     return full_query
 
 
-def generate_email(query, csv_path, myemail, n_dataset=100, n_docs=2, n_neighbors=20, model_name="prajjwal1/bert-medium", ollama_name="email_model_llama2"):
+def generate_email(query, 
+                   csv_path, 
+                   myemail, 
+                   n_dataset=100, 
+                   n_docs=2, 
+                   n_neighbors=20, 
+                   model_name="prajjwal1/bert-medium", 
+                   ollama_name="email_model_llama2"):
 
     documents = get_documents(query, csv_path, myemail, n_dataset, n_docs, n_neighbors, model_name)
     query = augment_query(query, documents)

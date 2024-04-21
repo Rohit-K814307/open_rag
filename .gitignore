@@ -1,1 +1,3 @@
 /open_rag/data/raw.CSV
+/open_rag/**/__pycache__/
+.DS_Store
