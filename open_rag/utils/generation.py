@@ -10,7 +10,7 @@ def get_documents(query, csv_path, myemail, n_dataset=100, n_docs=2, n_neighbors
 
 def augment_query(query, documents):
 
-    full_query = query + "\n\n\nHere are the email documents to base your email off of: "
+    full_query = query + "\n\n\nHere are the email documents to base your email style, tone, etc. (DO NOT COPY) off of: "
 
     for doc in documents:
         full_query += " \n" + str(doc)
