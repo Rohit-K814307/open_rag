@@ -4,10 +4,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Open Retrieval Augmented Generation</h3>
 
   <p align="center">
@@ -22,8 +18,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://nvtei.webflow.io)
+<p align="center">
+  <img src="https://blog.verisign.com/wp-content/uploads/VRSN_CompanyBrandedEmail_BlogImage8_201712-670x446.png" />
+</p>
 
 This project as built for the [Northern Virginia Technology Education Initiative](nvtei.webflow.io). A local Retrieval Augmented Generation method to complete any tasks. This specific implementation is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
 
