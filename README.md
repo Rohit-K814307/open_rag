@@ -13,10 +13,7 @@
   <p align="center">
     A simple shell-based tool that you can customize for any application.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="NVTEI.webflow.io">Visit the Organization</a>
+    <a href="https://NVTEI.webflow.io">Visit the Organization</a>
     ·
     <a href="https://github.com/Rohit-K814307/open_rag/issues">Report a Bug</a>
   </p>
@@ -26,7 +23,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](nvtei.webflow.io)
+[![Product Name Screen Shot][product-screenshot]](https://nvtei.webflow.io)
 
 This project as built for the [Northern Virginia Technology Education Initiative](nvtei.webflow.io). A local Retrieval Augmented Generation method to complete any tasks. This specific implementation is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
 
@@ -165,7 +162,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Rohit Kulkarni - "kulkarni.rohitva@gmail.com"
 
-Link to NVTEI: [nvtei.webflow.io](nvtei.webflow.io)
+Link to [NVTEI](https://nvtei.webflow.io) Organization main page: 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +192,7 @@ This project was built for the Northern Virginia Technology Education Initiative
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://blog.verisign.com/wp-content/uploads/VRSN_CompanyBrandedEmail_BlogImage8_201712-670x446.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
