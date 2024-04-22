@@ -118,7 +118,11 @@ This project is an LLM-powered client.
 In order to run the client, please follow these steps:
 
 1. Open a new terminal at root
-2. Query the LLM with your desired inputs and choose model parameters
+2. Allow running the generation script
+    ```sh
+    chmod +x ./open_rag/scripts/generate.sh
+    ```
+3. Query the LLM with your desired inputs and choose model parameters
     ```sh
     bash ./open_rag/scripts/generate.sh -q <query> -c <full path to csv emails> -e <your email address> ...
     ```
