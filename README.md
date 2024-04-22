@@ -8,54 +8,27 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Open Retrieval Augmented Generation</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A simple shell-based tool that you can customize for any application.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="NVTEI.webflow.io">Visit the Organization</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Rohit-K814307/open_rag/issues">Report a Bug</a>
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](nvtei.webflow.io)
 
-Built for having a local Retrieval Augmented Generation method to complete any tasks. This one is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
+This project as built for the [Northern Virginia Technology Education Initiative](nvtei.webflow.io). A local Retrieval Augmented Generation method to complete any tasks. This specific implementation is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,14 +110,6 @@ _Follow these steps in order to set up the repo._
     ```sh
     ollama create email_model_llama2 -f ./email_model_llama2.txt 
     ```
-5. Run Email Writing Client
-
-    i) Open a new terminal at root
-    ii) Query the LLM with your desired inputs and choose model parameters
-    ```sh
-    bash ./open_rag/scripts/generate.sh -q <query> -c <full path to csv emails> -e <your email address> ...
-    ```
-    - run `./open_rag/scripts/generate.sh -h` for help with arguments
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -154,9 +119,16 @@ _Follow these steps in order to set up the repo._
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is an LLM-powered client 
+This project is an LLM-powered client. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+In order to run the client, please follow these steps:
+
+1. Open a new terminal at root
+2. Query the LLM with your desired inputs and choose model parameters
+    ```sh
+    bash ./open_rag/scripts/generate.sh -q <query> -c <full path to csv emails> -e <your email address> ...
+    ```
+    - run `./open_rag/scripts/generate.sh -h` for help with arguments
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,9 +163,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Rohit Kulkarni - "kulkarni.rohitva@gmail.com"
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Link to NVTEI: [nvtei.webflow.io](nvtei.webflow.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,7 +174,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+This project was built for the Northern Virginia Technology Education Initiative (NVTEI).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
