@@ -5,7 +5,11 @@ class DataSet():
 
     def __init__(self, path_to_csv, myemail, num_emails_data):
         self.path_to_csv = path_to_csv
-        self.df = pd.read_csv(self.path_to_csv)
+
+        if type(path_to_csv) == type(""):
+            self.df = pd.read_csv(self.path_to_csv)
+        else:
+            self.df = path_to_csv
         self.subjects = self.df["Subject"]
         self.body = self.df["Body"]
         self.myemail = myemail

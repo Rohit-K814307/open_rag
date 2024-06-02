@@ -12,7 +12,10 @@ class Retriever():
         self.model_name = model_name
         self.csv_dir = csv_dir
 
+
         self.dataset = DataSet(self.csv_dir, myemail, n_dataset)
+
+
         self.bert = BERT(self.model_name)
 
         self.documents = self.dataset.emails

@@ -11,4 +11,4 @@ model_name = str(sys.argv[7])
 ollama_name = str(sys.argv[8])
 
 
-generate_email(query, csv_path, email, n_dataset, n_docs, n_neighbors, model_name, ollama_name)
+print(generate_email(query, csv_path, email, n_dataset, n_docs, n_neighbors, model_name, ollama_name))

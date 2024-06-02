@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open RAG</title>
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='home.css')}}">
+</head>
+<body>
+<div class="formwrap">
+    <form method="POST" enctype="multipart/form-data" class="form">
+        <div class="file-input-wrapper">
+            <input type="file" name="file" id="file" class="fileinp" onchange="updateFileName()">
+            <label for="file" class="file-label">Choose File</label>
+            <span id="file-name" class="file-name">No file chosen</span>
+        </div>
+        <input type="text" name="query" placeholder="Ask a Question" class="textinp item">
+        <input type="text" name="emailclass" placeholder="What is your email address?" class="textinp item">
+        <input type="text" name="ndataset" placeholder="Size of email dataset - default is 100" class="textinp item">
+        <input type="text" name="ndocs" placeholder="Number of docs to feed to llama - default is 2" class="textinp item">
+        <input type="text" name="nneighbors" placeholder="Number of neighbors for similarity algorithms - default is 20" class="textinp item">
+        <input type="submit" value="Submit" class="submitbt item"> 
+    </form>
+</div>
+{{ email }}
+<script>
+    function updateFileName() {
+        const fileInput = document.getElementById('file');
+        const fileNameDisplay = document.getElementById('file-name');
+        fileNameDisplay.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file chosen';
+    }
+</script>
+</body>
+</html>

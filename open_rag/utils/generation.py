@@ -32,5 +32,5 @@ def generate_email(query,
 
     llm = Ollama(model=ollama_name)
     resp = llm.invoke(query)
-    print(resp)
+    return resp
     
