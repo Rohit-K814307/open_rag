@@ -25,7 +25,7 @@ def generate_email(query,
                    n_docs=2, 
                    n_neighbors=20, 
                    model_name="prajjwal1/bert-medium", 
-                   ollama_name="email_model_llama2"):
+                   ollama_name="email_model_qwen"):
 
     documents = get_documents(query, csv_path, myemail, n_dataset, n_docs, n_neighbors, model_name)
     query = augment_query(query, documents)
