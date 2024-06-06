@@ -102,7 +102,7 @@ _Follow these steps in order to set up the repo._
     ```
     ii) Create the Ollama custom model
     ```sh
-    ollama create email_model_llama2 -f ./email_model_llama2.txt 
+    ollama create email_model_qwen -f ./email_model_qwen.txt 
     ```
 
 
