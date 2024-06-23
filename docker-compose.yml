@@ -10,7 +10,6 @@ services:
       - app-network
     environment:
       - OLLAMA_SERVER_URL=http://ollama_server:11434
-    command: python3 -m open_rag_api.app
 
   ollama_server:
     image: ollama/ollama:latest

@@ -10,7 +10,7 @@ COPY . .
 
 RUN chmod +x /start_ollama.sh
 
-CMD ["python", "open_rag_api/app.py"]
+CMD ["python3", "open_rag_api/app.py"]
 
 
 
