@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  flask_server:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - ollama_server
+    networks:
+      - app-network
+    environment:
+      - OLLAMA_SERVER_URL=http://ollama_server:11434
+    command: python3 -m open_rag_api.app
+
+  ollama_server:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+      - ./start_ollama.sh:/start_ollama.sh
+    ports:
+      - "11434:11434"
+    networks:
+      - app-network
+    command: /start_ollama.sh
+
+volumes:
+  ollama:
+
+networks:
+  app-network:
+    driver: bridge

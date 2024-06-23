@@ -1,8 +1,11 @@
 from flask import Flask, request, render_template
 import pandas as pd
+import os
 from open_rag.utils.generation import generate_email
 
 app = Flask(__name__)
+
+ollama_server_url = os.getenv('OLLAMA_SERVER_URL', 'http://localhost:11434')
 
 @app.route('/', methods=['GET', 'POST'])
 def upload():
