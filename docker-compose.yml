@@ -9,18 +9,17 @@ services:
     networks:
       - app-network
     environment:
-      - OLLAMA_SERVER_URL=http://ollama_server:11434
+      - OLLAMA_SERVER_URL=http://ollama_server:11435
 
   ollama_server:
+    build: .
     image: ollama/ollama:latest
     volumes:
       - ollama:/root/.ollama
-      - ./start_ollama.sh:/start_ollama.sh
     ports:
-      - "11434:11434"
+      - "11435:11434"
     networks:
       - app-network
-    command: /start_ollama.sh
 
 volumes:
   ollama:
