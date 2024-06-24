@@ -1,17 +1,12 @@
 from flask import Flask, request, render_template
 import pandas as pd
-import os
 from open_rag.utils.generation import generate_email
 
 app = Flask(__name__)
 
-ollama_server_url = os.getenv('OLLAMA_SERVER_URL', 'http://localhost:11434')
-
 @app.route('/', methods=['GET', 'POST'])
 def upload():
-
     if request.method == 'POST':
-
         df = pd.read_csv(request.files.get('file'))
         query = request.form["query"]
         email_id = request.form["emailid"]
@@ -19,11 +14,13 @@ def upload():
         n_docs = int(request.form["ndocs"])
         n_neighbors = int(request.form["nneighbors"])
 
-        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors, host="http://localhost:11434")
+        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
+
+        print("email generated")
 
         return render_template('email.html', email=email)
     
     return render_template('home.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port="5001")
+    app.run()

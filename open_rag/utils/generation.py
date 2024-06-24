@@ -1,8 +1,6 @@
-from ollama import Client
+from langchain_community.llms import Ollama
 from open_rag.utils.retrieval import Retriever
-from langchain.llms import Ollama
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+
 
 def get_documents(query, csv_path, myemail, n_dataset=100, n_docs=2, n_neighbors=20, model_name="prajjwal1/bert-medium"):
 
@@ -27,34 +25,12 @@ def generate_email(query,
                    n_docs=2, 
                    n_neighbors=20, 
                    model_name="prajjwal1/bert-medium", 
-                   ollama_name="email_model_llama2:latest",
-                   ollama_host="http://localhost:11434"):
+                   ollama_name="email_model_llama2"):
 
     documents = get_documents(query, csv_path, myemail, n_dataset, n_docs, n_neighbors, model_name)
     query = augment_query(query, documents)
 
-    client = Client(host=ollama_host)
+    llm = Ollama(model=ollama_name)
+    resp = llm.invoke(query)
+    return resp
     
-    modelfile = '''
-    FROM llama2:latest
-    PARAMETER temperature 0.2
-    SYSTEM You are an email assistant, you help with composing new email responses using the same format, word choice, tone, and writing style given emails I have sent before. Do not use the same names, locations, etc. - I just want you to use the writing style and word choices that I use.
-    '''
-    client.create(model=ollama_name[0:ollama_name.index(":")], modelfile=modelfile)
-
-    response = client.chat(model=ollama_name, messages=[
-        {
-            'role':'user',
-            'content':query
-        }
-    ])
-
-    llm = Ollama(
-        base_url="http://localhost:11434",
-        model="email_model_llama2",
-        callback_manager=CallbackManager([StreamingStdOutCallbackHandler()])
-    )
-
-    
-
-    return response['message']['content']
