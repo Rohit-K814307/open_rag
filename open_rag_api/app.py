@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
+
         df = pd.read_csv(request.files.get('file'))
         query = request.form["query"]
         email_id = request.form["emailid"]
@@ -14,9 +15,8 @@ def upload():
         n_docs = int(request.form["ndocs"])
         n_neighbors = int(request.form["nneighbors"])
 
-        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
 
-        print("email generated")
+        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
 
         return render_template('email.html', email=email)
     
