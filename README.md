@@ -172,7 +172,7 @@ Link to [NVTEI](https://nvtei.webflow.io) Organization main page:
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This project was built for the Northern Virginia Technology Education Initiative (NVTEI).
+This project is presented to communities through the Northern Virginia Technology Education Initiative (NVTEI).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
