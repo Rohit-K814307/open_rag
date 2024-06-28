@@ -22,7 +22,7 @@
   <img src="https://blog.verisign.com/wp-content/uploads/VRSN_CompanyBrandedEmail_BlogImage8_201712-670x446.png" />
 </p>
 
-This project as built for the [Northern Virginia Technology Education Initiative](nvtei.webflow.io). A local Retrieval Augmented Generation method to complete any tasks. This specific implementation is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
+A local Retrieval Augmented Generation method to complete any tasks. This specific implementation is built for accelerating email writing using previously written emails. A couple of changes and this can be suitable for any task!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
