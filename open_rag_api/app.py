@@ -12,15 +12,15 @@ def upload():
 
         print("dog")
 
-        df = pd.read_csv(request.files.get('file'))
+        df = pd.read_csv(request.files.get("csvfromoutlook"))
         query = request.form["query"]
-        email_id = request.form["emailid"]
+        email_id = request.form["emailclass"]
         n_dataset = int(request.form["ndataset"])
         n_docs = int(request.form["ndocs"])
         n_neighbors = int(request.form["nneighbors"])
 
         print("dog")
-        #email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
+        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
 
 
 
