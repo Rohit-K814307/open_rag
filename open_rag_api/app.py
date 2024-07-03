@@ -12,7 +12,7 @@ def upload():
 
         print("dog")
 
-        #df = pd.read_csv(request.files.get('file'))
+        df = pd.read_csv(request.files.get('file'))
         query = request.form["query"]
         email_id = request.form["emailid"]
         n_dataset = int(request.form["ndataset"])

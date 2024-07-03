@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="formwrap">
-    <form method="post" enctype="multipart/form-data" class="form">
+    <form method="post" enctype="multipart/form-data" class="form" action="{{ url_for('upload') }}">
         <div class="file-input-wrapper">
             <input type="file" name="file" id="file" class="fileinp" onchange="updateFileName()">
             <label for="file" class="file-label">Choose File</label>
