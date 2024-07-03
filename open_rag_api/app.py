@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import pandas as pd
 from open_rag.utils.generation import generate_email
-from flask_ngrok import run_with_ngrok
+from flask_ngrok2 import run_with_ngrok
 
 app = Flask(__name__)
 run_with_ngrok(app)
