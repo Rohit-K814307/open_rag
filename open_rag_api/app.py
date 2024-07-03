@@ -10,15 +10,17 @@ run_with_ngrok(app)
 def upload():
     if request.method == 'POST':
 
-        df = pd.read_csv(request.files.get('file'))
+        print("dog")
+
+        #df = pd.read_csv(request.files.get('file'))
         query = request.form["query"]
         email_id = request.form["emailid"]
         n_dataset = int(request.form["ndataset"])
         n_docs = int(request.form["ndocs"])
         n_neighbors = int(request.form["nneighbors"])
 
-
-        email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
+        print("dog")
+        #email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
 
         return render_template('email.html', email=email)
     
