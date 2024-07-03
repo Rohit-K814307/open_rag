@@ -3,3 +3,4 @@ langchain_community
 numpy
 pandas
 scikit_learn
+flask-ngrok
