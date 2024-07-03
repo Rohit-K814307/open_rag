@@ -22,7 +22,9 @@ def upload():
         print("dog")
         #email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
 
-        return render_template('email.html', email=email)
+
+
+        return render_template('email.html', email="dog")
     
     return render_template('home.html')
 
