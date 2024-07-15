@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import pandas as pd
 from open_rag.utils.generation import generate_email
+from open_rag.data.get_panda import get_panda
 from flask_ngrok2 import run_with_ngrok
 
 app = Flask(__name__)
@@ -11,12 +12,16 @@ def upload():
     if request.method == 'POST':
 
         if not request.files.get("csvfromoutlook"):
-            df = pd.read_csv("open_rag\\data\\NVTEI_base.csv")
+            df = get_panda()
         else:
             df = pd.read_csv(request.files.get("csvfromoutlook"))
         
         query = request.form["query"]
-        email_id = request.form["emailclass"]
+
+        if not request.form["emailclass"]:
+            email_id = "nvtei.team@gmail.com"
+        else:
+            email_id = request.form["emailclass"]
 
         #params
         if not request.form["ndataset"]:
