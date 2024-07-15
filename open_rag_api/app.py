@@ -10,15 +10,31 @@ run_with_ngrok(app)
 def upload():
     if request.method == 'POST':
 
-        df = pd.read_csv(request.files.get("csvfromoutlook"))
+        if not request.files.get("csvfromoutlook"):
+            df = pd.read_csv("open_rag\\data\\NVTEI_base.csv")
+        else:
+            df = pd.read_csv(request.files.get("csvfromoutlook"))
+        
         query = request.form["query"]
         email_id = request.form["emailclass"]
-        n_dataset = int(request.form["ndataset"])
-        n_docs = int(request.form["ndocs"])
-        n_neighbors = int(request.form["nneighbors"])
+
+        #params
+        if not request.form["ndataset"]:
+            n_dataset = 30
+        else:
+            n_dataset = int(request.form["ndataset"])
+
+        if not request.form["ndocs"]:
+            n_docs = 3
+        else:
+            n_docs = int(request.form["ndocs"])
+        
+        if not request.form["nneighbors"]:
+            n_neighbors = 10
+        else:
+            n_neighbors = int(request.form["nneighbors"])
 
         email = generate_email(query, df, email_id, n_dataset, n_docs, n_neighbors)
-
 
 
         return render_template('email.html', email=email)
