@@ -13,7 +13,7 @@ def augment_query(query, documents):
     full_query = query + "\n\n\nHere are the email documents to base your email style, tone, etc. (DO NOT COPY) off of: "
 
     for doc in documents:
-        full_query += " \n" + str(doc)
+        full_query += "NEW EMAIL BEGINNING NOW:\n" + str(doc)
 
     return full_query
 
