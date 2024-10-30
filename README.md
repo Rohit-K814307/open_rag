@@ -9,11 +9,15 @@
   <p align="center">
     A simple shell-based tool that you can customize for any application.
     <br />
-    <a href="https://NVTEI.webflow.io">Visit the Organization</a>
+    <a href="https://NVTEI.org">Visit the Organization</a>
     ·
     <a href="https://github.com/Rohit-K814307/open_rag/issues">Report a Bug</a>
   </p>
 </div>
+
+## MAJOR UPDATE - Google Collaboratory Support
+
+This tool has been put entirely into a Google Collaboratory notebook available at [https://ai-training.nvtei.org](https://ai-training.nvtei.org). Please use this to run and access the RAG-pipeline detailed in this codebase. 
 
 
 <!-- ABOUT THE PROJECT -->
