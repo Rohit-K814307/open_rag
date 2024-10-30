@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Rohit Kulkarni - "kulkarni.rohitva@gmail.com"
 
-Link to [NVTEI](https://nvtei.webflow.io) Organization main page: 
+Link to [NVTEI](https://nvtei.org) Organization main page: 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
