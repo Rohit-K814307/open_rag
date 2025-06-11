@@ -9,7 +9,7 @@
   <p align="center">
     A simple shell-based tool that you can customize for any application.
     <br />
-    <a href="https://NVTEI.org">Visit the Organization</a>
+    <a href="https://nvtei.netlify.app">Visit the Organization</a>
     ·
     <a href="https://github.com/Rohit-K814307/open_rag/issues">Report a Bug</a>
   </p>
